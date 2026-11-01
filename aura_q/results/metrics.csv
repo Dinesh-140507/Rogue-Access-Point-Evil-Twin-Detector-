@@ -1,0 +1,4 @@
+mode,accuracy,recall,precision,false_alarm_rate,runs_detected,latency_median_s,latency_p95_s
+rules,0.9789,0.9111,0.9941,0.00155,0.9111,2.00,4.00
+ml,0.9392,0.7713,0.9473,0.01236,0.9778,2.00,4.00
+hybrid,0.9789,0.9111,0.9941,0.00155,0.9111,2.00,4.00

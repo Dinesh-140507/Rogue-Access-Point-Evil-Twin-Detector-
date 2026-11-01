@@ -1,0 +1,10 @@
+test,criterion,measured,result
+1 Normal baseline stability,Runs with any SUSPICIOUS <= 5%,0.0%,PASS
+2 Environmental obstacle,Runs with any SUSPICIOUS <= 5%,0.0%,PASS
+3 Evil-twin canary,Detected >= 90% and median latency <= 10 s,100.0% / 2.0 s,PASS
+4 Low-sample guardrail,"UNVERIFIED shown, SUSPICIOUS in <= 5% of runs","UNVERIFIED 100%, SUSPICIOUS 0.0%",PASS
+5 Capture process crash,COMM_FAULT within 3 s,max 3.00 s,PASS
+6 IPC corruption injection,100% rejected + fault state,"2000/2000, fault=True",PASS
+7 Dashboard independence,Alerts continue with Flask stopped,NOT SIMULATED - verify on the board,N/A
+8 ML fallback resilience,Rules-only mode still detects >= 80% of evil twins,100.0% detected with rules only,PASS
+9 Legit roaming / mesh,SUSPICIOUS <= 5% and channel change logged,"SUSPICIOUS 0.0%, logged 100%",PASS
