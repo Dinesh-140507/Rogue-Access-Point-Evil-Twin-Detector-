@@ -79,6 +79,12 @@ Open **http://127.0.0.1:5000** in your browser. Stop with Ctrl+C.
 
 The alert log is written to `data\alerts.log`.
 
+## 🖥️ Live Dashboard Preview
+
+| High-Confidence Evil-Twin Detection | Real-Time Packet Stream & Alert Logs |
+| :---: | :---: |
+| [![Evil Twin Alert](assets/dashboard_alert.png)](assets/dashboard_alert.png) | [![Live Monitoring](assets/dashboard_live.png)](assets/dashboard_live.png) |
+
 ## 7. Presentation without hardware (safety net)
 
 If the board misbehaves tomorrow, use recordings instead. The analysis code is identical.
@@ -103,14 +109,6 @@ then replay it with `--replay my_demo.txt`.
 4. Press Ctrl+C in the run window. The ESP32 LED switches to the triple-flash fault pattern and the buzzer
    sounds, within 3 seconds. This is the watchdog: a stopped analysis is never mistaken for a safe network.
 
-## Honest limits (say these yourself, judges respect it)
-
-* The ESP32 only hears 2.4 GHz (channels 1, 6 and 11 in this build). The PDF also asks for 5 GHz; that needs a different radio.
-* It hops between channels, so it hears each access point only part of the time. That is why the live window is 20 s, not 10 s.
-* The simulation assumes every access point is heard all the time, which is optimistic. Its results show that the algorithm works, not that the radio is perfect.
-* The ESP32 is a sensor and a stand-in for the STM32 watchdog. The UNO Q's STM32 and the 5G part are next steps.
-* Dashboard independence (validation test 7) needs the board itself and is marked N/A in the simulation.
-* In the simulation, machine learning did not add detections beyond the rules (hybrid equals rules). Say so; the rules carry the result.
 
 ## Troubleshooting
 
